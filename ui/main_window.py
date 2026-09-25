@@ -24,7 +24,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Sentinel Firewall")
+        self.setWindowTitle("Ozone Firewall")
 
         self.resize(1300, 800)
 

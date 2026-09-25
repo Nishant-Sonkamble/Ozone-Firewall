@@ -768,19 +768,25 @@ Reasons:
     def show_vt_api_warning(self):
      msg = QMessageBox(self)
 
-     msg.setWindowTitle("VirusTotal API Required")
+     msg.setWindowTitle("VirusTotal Setup Required")
      msg.setIcon(QMessageBox.Information)
 
      msg.setText(
-        "Ozone Layer's built-in security engine performs offline analysis.\n\n"
-        "For additional cloud-based verification using VirusTotal's global "
-        "malware database, a personal VirusTotal API key is required.\n\n"
-        "Configure your API key in:\n\n"
-        "Settings → VirusTotal"
+        "🔍 VirusTotal scanning is not configured yet.\n\n"
+
+        "Ozone Firewall can analyze files using its built-in "
+        "security engine without an internet connection. "
+        "VirusTotal provides an additional cloud-based check "
+        "using multiple antivirus engines.\n\n"
+
+        "To use VirusTotal scanning, you need to add your "
+        "personal VirusTotal API key in Settings.\n\n"
+
+        "Click \"Open Settings\" to configure it."
     )
 
      open_settings = msg.addButton(
-        "Open Settings",
+        "⚙ Open Settings",
         QMessageBox.AcceptRole
     )
 
@@ -792,11 +798,10 @@ Reasons:
      msg.exec()
 
      if msg.clickedButton() == open_settings:
-        QMessageBox.information(
-            self,
-            "Coming Soon",
-            "Settings page will be available soon."
-        )
+        window = self.window()
+
+        if hasattr(window, "sidebar"):
+            window.sidebar.setCurrentRow(6)
 
     def scan_virustotal(self):
 
