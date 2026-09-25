@@ -1,0 +1,420 @@
+/* ===========================
+   Main Window
+   =========================== */
+
+QMainWindow{
+
+    background-color:#F5F7FA;
+
+}
+
+
+/* ===========================
+   General Widgets
+   =========================== */
+
+QWidget{
+
+    background-color:#F5F7FA;
+
+    color:#1F2937;
+
+}
+
+
+/* ===========================
+   Group Boxes
+   =========================== */
+
+QGroupBox{
+
+    background-color:#FFFFFF;
+
+    border:1px solid #D6D9DE;
+
+    border-radius:12px;
+
+    margin-top:14px;
+
+    padding:14px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+QGroupBox::title{
+
+    subcontrol-origin:margin;
+
+    left:14px;
+
+    padding:0px 6px;
+
+    color:#2563EB;
+
+}
+
+
+/* ===========================
+   Labels
+   =========================== */
+
+QLabel{
+
+    background:transparent;
+
+    color:#1F2937;
+
+    font-size:14px;
+
+}
+
+QLabel#cardTitle{
+
+    color:#1F2937;
+
+}
+
+QLabel#cardValue{
+
+    color:#111827;
+
+}
+
+QLabel#cardDescription{
+
+    color:#6B7280;
+
+    font-size:13px;
+
+}
+
+QLabel#protocolValue{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#111827;
+
+}
+
+
+/* ===========================
+   Push Buttons
+   =========================== */
+
+QPushButton{
+
+    background-color:#FFFFFF;
+
+    color:#1F2937;
+
+    border:1px solid #C9CDD3;
+
+    border-radius:8px;
+
+    padding:8px 14px;
+
+}
+
+QPushButton:hover{
+
+    background-color:#EEF6FF;
+
+    border:1px solid #38BDF8;
+
+}
+
+QPushButton:pressed{
+
+    background-color:#DCEEFF;
+
+}
+
+QPushButton:disabled{
+
+    background-color:#F1F3F5;
+
+    color:#9CA3AF;
+
+    border:1px solid #D1D5DB;
+
+}
+
+
+/* ===========================
+   Line Edit
+   =========================== */
+
+QLineEdit{
+
+    background-color:#FFFFFF;
+
+    color:#111827;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:8px;
+
+    padding:8px;
+
+}
+
+QLineEdit:focus{
+
+    border:1px solid #38BDF8;
+
+}
+
+
+/* ===========================
+   Radio Buttons
+   =========================== */
+
+QRadioButton{
+
+    color:#1F2937;
+
+    spacing:8px;
+
+    padding:4px;
+
+}
+
+QRadioButton:hover{
+
+    color:#2563EB;
+
+}
+
+
+/* ===========================
+   Tables
+   =========================== */
+
+QTableWidget{
+
+    background-color:#FFFFFF;
+
+    alternate-background-color:#F8FAFC;
+
+    color:#1F2937;
+
+    border:1px solid #D6D9DE;
+
+    border-radius:10px;
+
+    gridline-color:#E5E7EB;
+
+    selection-background-color:#2563EB;
+
+    selection-color:white;
+
+    outline:none;
+
+}
+
+QTableWidget::item{
+
+    padding:6px;
+
+    border:none;
+
+}
+
+QTableWidget::item:selected{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+QHeaderView::section{
+
+    background-color:#EEF2F7;
+
+    color:#1F2937;
+
+    border:none;
+
+    border-bottom:1px solid #D1D5DB;
+
+    padding:8px;
+
+    font-weight:bold;
+
+}
+
+QTableCornerButton::section{
+
+    background:#EEF2F7;
+
+    border:none;
+
+}
+
+
+/* ===========================
+   Vertical ScrollBar
+   =========================== */
+
+QScrollBar:vertical{
+
+    background:#E5E7EB;
+
+    width:12px;
+
+    border:none;
+
+    margin:2px;
+
+}
+
+QScrollBar::handle:vertical{
+
+    background:#9CA3AF;
+
+    border-radius:6px;
+
+    min-height:40px;
+
+}
+
+QScrollBar::handle:vertical:hover{
+
+    background:#38BDF8;
+
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical{
+
+    height:0px;
+
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical{
+
+    background:transparent;
+
+}
+
+
+/* ===========================
+   Horizontal ScrollBar
+   =========================== */
+
+QScrollBar:horizontal{
+
+    background:#E5E7EB;
+
+    height:12px;
+
+    border:none;
+
+    margin:2px;
+
+}
+
+QScrollBar::handle:horizontal{
+
+    background:#9CA3AF;
+
+    border-radius:6px;
+
+    min-width:40px;
+
+}
+
+QScrollBar::handle:horizontal:hover{
+
+    background:#38BDF8;
+
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal{
+
+    width:0px;
+
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal{
+
+    background:transparent;
+
+}
+
+
+/* ===========================
+   Flip Card
+   =========================== */
+
+QFrame#flipCard{
+
+    background-color:#FFFFFF;
+
+    border:1px solid #D6D9DE;
+
+    border-radius:16px;
+
+    padding:8px;
+
+}
+
+QFrame#flipCard:hover{
+
+    border:1px solid #38BDF8;
+
+}
+
+
+/* ===========================
+   Close Connection Button
+   =========================== */
+
+QPushButton#closeConnectionButton{
+
+    background-color:#DC2626;
+
+    color:white;
+
+    border:1px solid #B91C1C;
+
+    border-radius:8px;
+
+    padding:0px;
+
+    font-weight:bold;
+
+}
+
+QPushButton#closeConnectionButton:hover{
+
+    background-color:#EF4444;
+
+    border:1px solid #F87171;
+
+}
+
+QPushButton#closeConnectionButton:pressed{
+
+    background-color:#B91C1C;
+
+}
+
+QPushButton#closeConnectionButton:disabled{
+
+    background-color:#D1D5DB;
+
+    border:1px solid #D1D5DB;
+
+    color:#6B7280;
+
+}

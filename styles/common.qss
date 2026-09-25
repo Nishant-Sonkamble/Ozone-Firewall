@@ -1,0 +1,231 @@
+*{
+    font-family:"Segoe UI";
+    font-size:14px;
+}
+
+QPushButton{
+
+    border-radius:10px;
+
+    padding:8px 14px;
+
+}
+
+QTableWidget{
+
+    border-radius:10px;
+
+}
+
+QScrollBar:vertical{
+
+    width:12px;
+
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+
+
+QPushButton:hover{
+
+    border:1px solid;
+
+}
+
+QPushButton:pressed{
+
+    padding-top:9px;
+
+    padding-left:15px;
+
+}
+
+QRadioButton{
+
+    spacing:8px;
+
+    padding:4px;
+
+}
+
+QRadioButton:hover{
+
+    border-radius:6px;
+
+}
+
+/* ===========================
+   Stat Card
+   =========================== */
+
+QLabel#cardIcon{
+
+    font-size:30px;
+
+    background:transparent;
+
+}
+
+QLabel#cardTitle{
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    background:transparent;
+
+}
+
+QLabel#cardValue{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    background:transparent;
+
+}
+
+QLabel#cardDescription{
+
+    font-size:13px;
+
+    background:transparent;
+
+}
+
+/* ===========================
+   Context Menu
+   =========================== */
+
+QMenu{
+
+    background-color:#2A2D35;
+
+    color:#F3F4F6;
+
+    border:1px solid #3B3F47;
+
+    border-radius:8px;
+
+    padding:6px;
+
+}
+
+QMenu::item{
+
+    padding:8px 28px 8px 20px;
+
+    border-radius:6px;
+
+}
+
+QMenu::item:selected{
+
+    background-color:#2563EB;
+
+    color:white;
+
+}
+
+QMenu::separator{
+
+    height:1px;
+
+    background:#3B3F47;
+
+    margin:4px 8px;
+
+}
+
+QPushButton{
+
+    background-color:#2D313A;
+
+    color:#F3F4F6;
+
+    border:1px solid #40444D;
+
+    border-radius:8px;
+
+    padding:8px 14px;
+
+}
+
+QPushButton:hover{
+
+    background-color:#3A3F49;
+
+    border:1px solid #38BDF8;
+
+}
+
+QPushButton:pressed{
+
+    background-color:#2563EB;
+
+    border:1px solid #60A5FA;
+
+    padding-top:9px;
+
+    padding-left:15px;
+
+}
+
+
+/* ==========================================
+   Rules Page Buttons
+========================================== */
+
+QPushButton#allowButton {
+    background-color: #1E8E3E;
+    color: white;
+    border: 2px solid #36C95D;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton#allowButton:hover {
+    background-color: #28A745;
+}
+
+
+QPushButton#blockButton {
+    background-color: #B71C1C;
+    color: white;
+    border: 2px solid #FF5252;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton#blockButton:hover {
+    background-color: #D32F2F;
+}
+
+
+QPushButton#deleteButton {
+    background-color: #5F27CD;
+    color: white;
+    border: 2px solid #8E6CFF;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton#deleteButton:hover {
+    background-color: #7048E8;
+}
+
+
+QPushButton#refreshButton {
+    background-color: #0277BD;
+    color: white;
+    border: 2px solid #35C9FF;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton#refreshButton:hover {
+    background-color: #039BE5;
+}

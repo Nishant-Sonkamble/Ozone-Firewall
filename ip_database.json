@@ -1,0 +1,25 @@
+{
+    "185.220.101.45": {
+        "risk": "CRITICAL",
+        "score": 90,
+        "reason": "Known Tor Exit Node"
+    },
+
+    "45.155.205.233": {
+        "risk": "HIGH",
+        "score": 75,
+        "reason": "Known Malware Host"
+    },
+
+    "8.8.8.8": {
+        "risk": "SAFE",
+        "score": 0,
+        "reason": "Google DNS"
+    },
+
+    "1.1.1.1": {
+        "risk": "SAFE",
+        "score": 0,
+        "reason": "Cloudflare DNS"
+    }
+}

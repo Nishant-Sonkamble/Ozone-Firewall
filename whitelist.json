@@ -1,0 +1,48 @@
+{
+    "ips": [
+        "127.0.0.1",
+        "::1",
+        "8.8.8.8",
+        "1.1.1.1",
+        "13.107.4.50",
+        "151.101.1.69"
+    ],
+
+    "processes": [
+    "System",
+    "System Idle Process",
+    "services.exe",
+    "svchost.exe",
+    "lsass.exe",
+    "csrss.exe",
+    "wininit.exe",
+    "winlogon.exe",
+    "explorer.exe",
+    "dwm.exe",
+    "RuntimeBroker.exe",
+    "SearchHost.exe",
+    "taskhostw.exe",
+    "smss.exe",
+    "conhost.exe",
+    "chrome.exe",
+    "msedge.exe",
+    "firefox.exe",
+    "code.exe",
+    "OneDrive.exe",
+"ShellExperienceHost.exe",
+"StartMenuExperienceHost.exe",
+"TextInputHost.exe",
+"SearchIndexer.exe",
+"SearchHost.exe",
+"ApplicationFrameHost.exe",
+"WUDFHost.exe",
+"mysqld.exe",
+"NVDisplay.Container.exe",
+"EpicWebHelper.exe",
+"Google",
+"Cloudflare",
+"Microsoft",
+"GitHub"
+]
+
+}

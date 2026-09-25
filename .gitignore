@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE / editor
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime / local data
+settings.json
+history.json
+logs.json
+vt_cache.json
+vt_history.json
+

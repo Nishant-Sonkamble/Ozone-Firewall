@@ -1,0 +1,307 @@
+QFrame#ozoneCard{
+
+    background-color: rgba(18,26,38,200);
+
+    border: 1px solid rgba(103,232,249,170);
+
+    border-radius: 20px;
+
+}
+
+/* ==========================================
+   Page Titles
+   ========================================== */
+
+QLabel#pageTitle{
+
+    color:#67E8F9;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+QLabel#pageSubtitle{
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+
+/* ==========================================
+   Search Bar
+   ========================================== */
+
+QLineEdit{
+
+    background-color:rgba(18,30,45,220);
+
+    border:2px solid rgba(56,189,248,100);
+
+    border-radius:18px;
+
+    padding:8px 15px;
+
+    color:white;
+
+}
+
+QLineEdit:focus{
+
+    border:2px solid #38BDF8;
+
+}
+
+
+/* ==========================================
+   Tables
+   ========================================== */
+
+QTableWidget{
+
+    background-color:rgba(18,30,45,170);
+
+    border:1px solid rgba(56,189,248,80);
+
+    border-radius:14px;
+
+    alternate-background-color:rgba(25,40,58,150);
+
+    gridline-color:rgba(56,189,248,40);
+
+    selection-background-color:#1D4ED8;
+
+    selection-color:white;
+
+}
+
+
+/* ==========================================
+   Table Header
+   ========================================== */
+
+QHeaderView::section{
+
+    background-color:#163A56;
+
+    color:white;
+
+    border:none;
+
+    border-bottom:1px solid rgba(56,189,248,120);
+
+    padding:8px;
+
+    font-weight:bold;
+
+}
+
+
+/* ==========================================
+   Push Buttons
+   ========================================== */
+
+QPushButton{
+
+    background-color:#14344D;
+
+    border:1px solid rgba(56,189,248,90);
+
+    border-radius:10px;
+
+    color:white;
+
+    padding:8px 14px;
+
+}
+
+QPushButton:hover{
+
+    background-color:#1B4968;
+
+    border:1px solid #67E8F9;
+
+}
+
+QPushButton:pressed{
+
+    background-color:#2563EB;
+
+}
+
+
+/* ==========================================
+   Details Panel
+   ========================================== */
+
+QFrame#detailsFrame{
+
+    background-color:rgba(16,25,38,200);
+
+    border:1px solid rgba(56,189,248,80);
+
+    border-radius:16px;
+
+}
+
+
+/* ==========================================
+   GroupBox
+   ========================================== */
+
+QGroupBox{
+
+    background-color:rgba(18,30,45,170);
+
+    border:1px solid rgba(56,189,248,80);
+
+    border-radius:14px;
+
+    margin-top:12px;
+
+    padding:12px;
+
+}
+
+QGroupBox::title{
+
+    color:#67E8F9;
+
+    left:12px;
+
+}
+
+
+/* ==========================================
+   Scroll Bars
+   ========================================== */
+
+QScrollBar:vertical{
+
+    background:#122032;
+
+    width:12px;
+
+}
+
+QScrollBar::handle:vertical{
+
+    background:#38BDF8;
+
+    border-radius:6px;
+
+}
+
+QScrollBar::handle:vertical:hover{
+
+    background:#67E8F9;
+
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical{
+
+    height:0px;
+
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical{
+
+    background:transparent;
+
+}
+
+
+/* ==========================================
+   Activity Frame
+   ========================================== */
+
+QFrame{
+
+    border-radius:14px;
+
+}
+
+/* ==========================
+   Sidebar
+   ========================== */
+
+QListWidget{
+
+    background-color:#101B28;
+
+    border:none;
+
+    outline:none;
+
+    color:#C9D6E2;
+
+    font-size:14px;
+
+}
+
+QListWidget::item{
+
+    padding:12px;
+
+    margin:4px 8px;
+
+    border-radius:12px;
+
+}
+
+QListWidget::item:hover{
+
+    background-color:rgba(56,189,248,40);
+
+}
+
+QListWidget::item:selected{
+
+    background-color:rgba(56,189,248,90);
+
+    border-left:4px solid #67E8F9;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+QWidget{
+
+background:qlineargradient(
+x1:0,
+y1:0,
+x2:0,
+y2:1,
+
+stop:0 #0D1723,
+stop:0.45 #122032,
+stop:1 #09131D
+
+);
+
+}
+
+
+QFrame#ozoneSection{
+
+    background:qradialgradient(
+        cx:0.5,
+        cy:0.45,
+        radius:1.0,
+        fx:0.5,
+        fy:0.45,
+        stop:0 rgba(56,189,248,35),
+        stop:0.45 rgba(20,35,55,15),
+        stop:1 rgba(8,15,25,0)
+    );
+
+    border:none;
+
+}
