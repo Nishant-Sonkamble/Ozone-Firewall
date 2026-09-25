@@ -6,12 +6,13 @@ from PySide6.QtWidgets import (
     QTableWidgetItem,
     QPushButton,
     QHBoxLayout,
-    QHeaderView
+    QHeaderView,
+    QAbstractItemView
 )
 from PySide6.QtCore import Qt
 
 from logger import load_logs
-from PySide6.QtWidgets import QAbstractItemView
+
 
 class LogsPage(QWidget):
 
@@ -24,6 +25,16 @@ class LogsPage(QWidget):
         title.setAlignment(Qt.AlignCenter)
 
         layout.addWidget(title)
+
+        # Empty state message
+        self.empty_label = QLabel(
+            "📋 No security events recorded yet.\n"
+            "Activity will appear here as Ozone Firewall runs and records your actions."
+        )
+        self.empty_label.setAlignment(Qt.AlignCenter)
+        self.empty_label.setWordWrap(True)
+
+        layout.addWidget(self.empty_label)
 
         self.table = QTableWidget()
         self.table.setEditTriggers(QAbstractItemView.NoEditTriggers)
@@ -40,12 +51,8 @@ class LogsPage(QWidget):
         self.table.horizontalHeader().setSectionResizeMode(
             QHeaderView.Stretch
         )
-        self.table.setAlternatingRowColors(True)
-        
 
-        self.table.horizontalHeader().setSectionResizeMode(
-    QHeaderView.Stretch
-)
+        self.table.setAlternatingRowColors(True)
 
         layout.addWidget(self.table)
 
@@ -68,6 +75,13 @@ class LogsPage(QWidget):
 
         logs = load_logs()
 
+        if not logs:
+            self.table.setRowCount(0)
+            self.empty_label.show()
+            return
+
+        self.empty_label.hide()
+
         self.table.setRowCount(len(logs))
 
         for row, log in enumerate(logs):
@@ -89,13 +103,3 @@ class LogsPage(QWidget):
                 2,
                 QTableWidgetItem(log["action"])
             )
-
-        def load_log_table(self):
-
-         logs = load_logs()
-
-         print(logs)   # <-- add this
-
-         self.table.setRowCount(len(logs))
-
-         

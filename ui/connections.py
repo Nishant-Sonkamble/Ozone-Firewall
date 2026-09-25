@@ -554,6 +554,7 @@ Reasons:
 
         elif action == allow:
             exe = conn.get("exe")
+
             if not exe:
                 QMessageBox.warning(
                     self,
@@ -563,9 +564,19 @@ Reasons:
                 return
 
             success, out, err = allow_application(exe)
+
             if success:
-                add_process_rule(conn["process"],conn["exe"],"ALLOW")
-                add_log(conn["process"], "ALLOW")
+                add_process_rule(
+                    conn["process"],
+                    conn["exe"],
+                    "ALLOW"
+                )
+
+                add_log(
+                    conn["process"],
+                    "ALLOW"
+                )
+
                 QMessageBox.information(
                     self,
                     "Firewall Updated",
@@ -577,18 +588,40 @@ Reasons:
                 QMessageBox.information(
                     self,
                     "Already Allowed",
-                    f"{conn['process']} is already allowed.")    
+                    f"{conn['process']} is already allowed."
+                )
+
             else:
                 QMessageBox.critical(
                     self,
-                    "Firewall Error",
-                    err
+                    "Administrator Privileges Required",
+                    "Ozone Firewall needs administrator privileges "
+                    "to modify Windows Firewall rules.\n\n"
+
+                    "How to restart Ozone Firewall as Administrator:\n\n"
+
+                    "1. Close Ozone Firewall.\n"
+                    "2. Close Visual Studio Code.\n"
+                    "3. Right-click Visual Studio Code.\n"
+                    "4. Select \"Run as administrator\".\n"
+                    "5. Open the Ozone Firewall project again.\n"
+                    "6. Start Ozone Firewall using the same Python setup "
+                    "you normally use.\n\n"
+
+                    "• If you normally use a virtual environment, "
+                    "activate it first.\n"
+                    "• If you normally use Python directly, continue "
+                    "using Python directly.\n\n"
+
+                    "You do not need to create a new virtual environment "
+                    "or reinstall the dependencies."
                 )
 
             self.load_connections()
 
         elif action == block:
             exe = conn.get("exe")
+
             if not exe:
                 QMessageBox.warning(
                     self,
@@ -598,9 +631,19 @@ Reasons:
                 return
 
             success, out, err = block_application(exe)
+
             if success:
-                add_process_rule(conn["process"],conn["exe"],"BLOCK")
-                add_log(conn["process"], "BLOCK")
+                add_process_rule(
+                    conn["process"],
+                    conn["exe"],
+                    "BLOCK"
+                )
+
+                add_log(
+                    conn["process"],
+                    "BLOCK"
+                )
+
                 QMessageBox.warning(
                     self,
                     "Firewall Updated",
@@ -610,16 +653,36 @@ Reasons:
             elif out == "ALREADY_BLOCKED":
 
                 QMessageBox.information(
-        self,
-        "Already Blocked",
-        f"{conn['process']} is already blocked."
-    )    
+                    self,
+                    "Already Blocked",
+                    f"{conn['process']} is already blocked."
+                )
+
             else:
                 QMessageBox.critical(
-                    self,
-                    "Firewall Error",
-                    err
-                )
+                                self,
+                                "Administrator Privileges Required",
+                                "Ozone Firewall needs administrator privileges "
+                                "to modify Windows Firewall rules.\n\n"
+
+                                "How to restart Ozone Firewall as Administrator:\n\n"
+
+                                "1. Close Ozone Firewall.\n"
+                                "2. Close Visual Studio Code.\n"
+                                "3. Right-click Visual Studio Code.\n"
+                                "4. Select \"Run as administrator\".\n"
+                                "5. Open the Ozone Firewall project again.\n"
+                                "6. Start Ozone Firewall using the same Python setup "
+                                "you normally use.\n\n"
+
+                                "• If you normally use a virtual environment, "
+                                "activate it first.\n"
+                                "• If you normally use Python directly, continue "
+                                "using Python directly.\n\n"
+
+                                "You do not need to create a new virtual environment "
+                                "or reinstall the dependencies."
+                            )
 
             self.load_connections()
 
